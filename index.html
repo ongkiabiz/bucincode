@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Romantic Magical Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Import Maps for Three.js -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Three.js Canvas -->
+  <canvas id="threeCanvas"></canvas>
+
+  <!-- MediaPipe Hidden Video -->
+  <video id="webcam" autoplay playsinline muted style="display: none;"></video>
+  
+  <!-- UI Overlays -->
+  <div id="loadingOverlay" class="overlay active">
+    <div class="heart-loader">❤️</div>
+    <p id="statusText">Mempersiapkan Keajaiban untukmu...</p>
+  </div>
+
+  <div id="quoteOverlay" class="quote-container">
+    <h1 id="quoteText"></h1>
+  </div>
+
+  <div id="gestureHint" class="hint">
+    ✨ Angkat jarimu (1, 2, 3, atau 4) untuk mengganti bentuk keajaiban ✨
+  </div>
+
+  <div id="flashEffect" class="flash"></div>
+
+  <!-- MediaPipe -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+  
+  <script type="module" src="app.js"></script>
+</body>
+</html>
